@@ -11,7 +11,7 @@ const ProfilePageVazia =()=>{
             <div>
                 <p>Endereço Cadastrado</p>
                 <p>Rua da Jujuba sabor menta-Vila Pokemon </p>
-                <button>Editar <img src="lapis" /></button>
+                <button>Editar <img src="/home/matheus035/labenu/labefood/Shaw-labe-food6/4food/src/Icons" /></button>
             </div>
             <h3>Histórico de pedidos</h3>
                 {/* CARDS */}
