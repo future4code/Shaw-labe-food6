@@ -1,4 +1,8 @@
 import React from 'react';
+
+import { GlobalState } from "./global/GlobalState";
+import Router from "./routes/Router";
+
 import Header from './Components/Header/Header';
 import BarraBusca from './Components/BarraRestaurante/BarraBuscaRestaurante'
 import CardBusca from './Components/cardBusca/CardBusca';
@@ -7,15 +11,17 @@ import CardBusca from './Components/cardBusca/CardBusca';
 
 function App() {
   return (
-   <div>
+    <div>
 
-     <Header/>
-     <BarraBusca/>
-     <CardBusca/>
+      <Header/>
+      <BarraBusca/>
+      <CardBusca/>
 
-     Olá Devs!!!
+      <GlobalState>
+        <Router/>
+      </GlobalState>
 
-   </div>
+    </div>
   );
 }
 

@@ -11,7 +11,7 @@ export const voltar =(navigate)=>{
     navigate(-1)
 }
 //Botao CRIAR
-export const cadastroEndereço = (navigate)=>{
+export const cadastroEndereco = (navigate)=>{
     navigate("/Cadastro-Endereço")
 }
 
@@ -26,7 +26,7 @@ export const vaiHome= (navigate) => {
 //CARD BUSCA
 {/* <Header + botão voltar> */}
 
-//HOME <Card Restaurante/>
+//HOME <Card Restaurant/>
 //Botao NomeRest - on click ={vaiParaPgRest} - vai receber pathParams depois pra pegar o nome do rest
 export const vaiPgRest=(navigate)=>{
     navigate("/Home/Restaurante")
@@ -61,7 +61,7 @@ export const addressEdit=(navigate)=>{
 
 //PAGINAS EDIT USER e EDIT ADDRESS
 {/* <Header + botão voltar> */}
-//botao SALVAR = vaiHome
+//botao SALVAR = ...? alert salvo + limpa input?
 
 //CARRINHO
 //botao Confirmar - alert Pedido em andamento

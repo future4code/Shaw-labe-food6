@@ -1,9 +1,15 @@
 import { Routes, Route, BrowserRouter} from "react-router-dom";
+import Home from "../pages/home/Home";
 
 import Login from "../pages/login/Login";
-import Cadastro from "../pages/cadastro/Cadastro";
-import Feed from "../pages/feed/Feed";
-import Post from "../pages/post/Post";
+import SignUp from "../pages/signup/SignUp";
+import SignUpAddress from "../pages/signup/SignUpAddress";
+import Home from "../pages/home/Home";
+import RestaurantPage from "../pages/restaurantPage/RestaurantPage";
+import Carrinho from "../pages/carrinh/Carrinho";
+
+
+
 
 const Router = ()=>{
     return(
@@ -18,8 +24,7 @@ const Router = ()=>{
                 <Route path="/Carrinho" element={<Carrinho/>}/>
                 <Route path="/Perfil" element={<Perfil/>}/>
                 <Route path="/Edita-Cadastro" element={<EditaCadastro/>}/>
-                <Route path="/Edita-Endereco" element={<EditaEndereco/>}/>
-                
+                <Route path="/Edita-Endereco" element={<EditaEndereco/>}/>                
             </Routes>
         </BrowserRouter>        
     )
