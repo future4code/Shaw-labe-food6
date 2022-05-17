@@ -13,7 +13,7 @@ function App() {
      <BarraBusca/>
      <CardBusca/>
 
-     Olá Devs!
+     Olá Devs!!!
 
    </div>
   );
