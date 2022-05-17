@@ -1,7 +1,9 @@
 import React from 'react';
+import TelaInicial from './Pages/TelaInicial/TelaInicial';
+import BarraOpcao from './Components/barraOpcao/barraOpcao';
+import BarraBusca from './Components/BarraRestaurante/BarraBuscaRestaurante';
+import CardBusca from './Components/cardBusca/CardBusca'
 import Header from './Components/Header/Header';
-import BarraBusca from './Components/BarraRestaurante/BarraBuscaRestaurante'
-import CardBusca from './Components/cardBusca/CardBusca';
 
 
 
@@ -9,11 +11,17 @@ function App() {
   return (
    <div>
 
-     <Header/>
+     
+     
+       <Header/>
+     <TelaInicial/>
      <BarraBusca/>
+     <BarraOpcao/>
      <CardBusca/>
 
-     Olá Devs!!!
+     
+
+     
 
    </div>
   );
