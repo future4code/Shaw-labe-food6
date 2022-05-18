@@ -1,5 +1,6 @@
 import React from 'react';
-import { TelaInicialContainer } from './Styled';
+import { TelaInicialContainer } from '../TelaInicial/styled'
+import ifuture from '../../Imagens/ifuture.png'
 
 
 
@@ -11,7 +12,7 @@ export const TelaInicial = () => {
 
 
         <TelaInicialContainer>
-      <h1> Bem vindos ao 4food</h1>
+      <img src ={ifuture}/> 
         </TelaInicialContainer>
 
      );  
