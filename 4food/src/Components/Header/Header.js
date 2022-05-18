@@ -5,7 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 
 
@@ -26,10 +26,13 @@ const Header = () =>{
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
+            align-items = "center"
+            
           >
-            <MenuIcon />
+            <ArrowBackIosIcon  />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>  
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} align="center">
+          ifuture  
           </Typography>
           
           <Button  color="inherit"></Button>
@@ -40,3 +43,5 @@ const Header = () =>{
   );
 }
 export default Header 
+
+
