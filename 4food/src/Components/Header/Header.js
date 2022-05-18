@@ -6,15 +6,13 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-
-
+import { voltar } from '../../routes/Coordinator';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Header = () =>{
- 
-  
-
+  const navigate = useNavigate()
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -35,7 +33,7 @@ const Header = () =>{
           ifuture  
           </Typography>
           
-          <Button  color="inherit"></Button>
+          <Button onClick={()=>voltar(navigate)} color="inherit"></Button>
     
         </Toolbar>
       </AppBar>

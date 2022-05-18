@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -55,3 +56,19 @@ const Footer = () =>{
   );
 }
 export default Footer 
+=======
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { vaiCarrinho, vaiHome, vaiPerfil } from "../../routes/Coordinator";
+
+const Footer=()=>{
+    const navigate = useNavigate()
+    return(
+        <div>
+            <button onClick={()=>vaiHome(navigate)}>Home</button>
+            <button onClick={()=>vaiCarrinho(navigate)}>Carrinho</button>
+            <button onClick={()=>vaiPerfil(navigate)}>Perfil</button>
+        </div>
+    )
+}
+>>>>>>> 4ccdb681c190209b4a2353c01b956fa5cd8e2fdb

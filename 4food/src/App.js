@@ -1,28 +1,25 @@
 import React from 'react';
-import TelaInicial from './Pages/TelaInicial/TelaInicial';
-import BarraOpcao from './Components/barraOpcao/barraOpcao';
-import BarraBusca from './Components/BarraRestaurante/BarraBuscaRestaurante';
-import CardBusca from './Components/cardBusca/CardBusca'
-import Header from './Components/Header/Header';
-import {ThemeProvider} from '@mui/material';
-import theme from './Components/colors/theme';
-import Footer from './Components/Footer/Footer';
+import { GlobalState } from "./global/GlobalState";
+import Router from "./routes/Router";
+
+
+
 
 
 
 
 function App() {
   return (
-   <ThemeProvider theme={theme}>
-       <Header/>
-     <TelaInicial/>
-     <BarraBusca/>
-     <BarraOpcao/>
-     <CardBusca/>
-     <Footer/>
 
-   </ThemeProvider>
-   
+<div>
+    
+      <GlobalState>
+        <Router/>
+      </GlobalState>
+
+
+    </div>
+
   );
 }
 
