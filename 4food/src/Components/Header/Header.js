@@ -6,15 +6,12 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-
-
-
+import { voltar } from '../../routes/Coordinator';
+import { useNavigate } from 'react-router-dom';
 
 
 const Header = () =>{
- 
-  
-
+  const navigate = useNavigate()
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -32,7 +29,7 @@ const Header = () =>{
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>  
           </Typography>
           
-          <Button  color="inherit"></Button>
+          <Button onClick={()=>voltar(navigate)} color="inherit"></Button>
     
         </Toolbar>
       </AppBar>

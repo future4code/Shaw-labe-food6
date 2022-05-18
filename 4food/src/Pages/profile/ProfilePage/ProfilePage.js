@@ -9,6 +9,7 @@ import axios from "axios";
     const [cpf, setCpf]=useState()
     const [hasAddress, setHasAddress]=useState()
     const [address, setAddress]=useState()
+    const [users, setUsers]=useState([])
 
 
     const onChangeId =(ev)=>{
@@ -42,42 +43,28 @@ import axios from "axios";
 
 
 
-    
-    const body = {
+const ProfilePageVazia =()=>{
 
-        id:fdfdfd ,
-        name:fdfsdf ,
-        email:fdsfsd ,
-        cpf: fdfdf,
-        hasAddress: dsds,
-        address:jhh
+
+const handleUsers=()=>{
+
+    const body = {
+        id:"" ,
+        name:"",
+        email:"",
+        cpf:"",
+        hasAddress: "",
+        address:""
+    }
+    axios.post(`${baseUrl}/profile`, body).then((res)=>{
+        setUsers(res.data.results)
+    }).catch((err)=>{
+        console.log(err)
+    })
+    
     }
 
-/*
-    try{
-    
-    const response= await axios.post(`${baseUrl}/profile`, body)
-    localStorage.setItem("token",response.data.token)
-    {goToFeedPage(navigate)}
-  }
 
-  axios.post(`${baseUrl}/profile`, body).then((res)=>{
-    set(res.data.results)
-  }).catch((err)=>{
-    console.log(err)
-  })
- 
-},[])
-*/
-
-
-
-
-
-
-
-
-const ProfilePageVazia =()=>{
     return(
         <div>
             <h1>Meu Perfil</h1>

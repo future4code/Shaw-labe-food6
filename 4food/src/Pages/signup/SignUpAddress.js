@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { vaiHome } from "../../routes/Coordinator";
 
 const SignUpAddress =()=>{
+    const navigate = useNavigate()
     return(
         <div>
             <p>Meu Endereço</p>
@@ -11,9 +14,10 @@ const SignUpAddress =()=>{
                 <input placeholder="Bairro" type="text"/>
                 <input placeholder="Cidade" type="text"/>
                 <input placeholder="Estado" typer="text"/>
-                <button>Salvar</button>
-                {/* vai pra home */}
+                <button onClick={()=>vaiHome(navigate)}>Salvar</button>
             </form>
         </div>
     )
 }
+
+export default SignUpAddress;
