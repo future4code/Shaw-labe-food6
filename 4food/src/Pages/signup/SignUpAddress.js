@@ -1,13 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { vaiHome } from "../../routes/Coordinator";
+// import { vaiHome } from "../../routes/Coordinator";
 import useForm from "../../hooks/useForm";
 import {SignUpAddressFunction} from "../../services/SignUpAddressFunction";
 import {useUnprotectedPage} from "../../hooks/useUnprotectedPage";
 
 
 const SignUpAddress =()=>{
-    useUnprotectedPage()
+    // useUnprotectedPage()
     const navigate = useNavigate()
     const token = localStorage.getItem("token")
     const [form, handleInputChange, clear]=useForm({street:"", number:"", neighbourhood:"", city:"", state:"", complement:""})
@@ -57,6 +57,7 @@ const SignUpAddress =()=>{
                 name={"state"}
                 value={form.state}
                 onChange={handleInputChange}/>
+                <br/><br/>
                 <button type={"submit"}>Salvar</button>
                 {/* onClick={()=>vaiHome(navigate)} */}
             </form>

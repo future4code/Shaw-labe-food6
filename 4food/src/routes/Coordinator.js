@@ -12,7 +12,7 @@ export const voltar =(navigate)=>{
 }
 //Botao CRIAR
 export const cadastroEndereco = (navigate)=>{
-    navigate("/Cadastro-Endereco")
+    navigate("/Cadastro/Endereco")
 }
 
 //PAGINA CADASTRO ENDEREÇO

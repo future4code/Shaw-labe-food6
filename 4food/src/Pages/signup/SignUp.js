@@ -1,21 +1,46 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-// import { cadastroEndereco } from "../../routes/Coordinator";
-// import {useUnprotectedPage} from "../../hooks/useUnprotectedPage";
-import useForm from "../../hooks/useForm";
-import {SignUpFunction} from "../../services/SignUpFunction";
+import React, { useLayoutEffect } from "react";
+import axios from "axios";
 
-const SignUp=()=>{
-    // useUnprotectedPage()
+import { useNavigate } from "react-router-dom";
+import { cadastroEndereco } from "../../routes/Coordinator";
+
+import useForm from "../../hooks/useForm";
+
+import { baseUrl } from "../../BaseUrl/baseUrl";
+// import {SignUpFunction} from "../../services/SignUpFunction";
+
+const SignUp=()=>{ 
+    
     const navigate = useNavigate()
     const token = localStorage.getItem("token")
     const [form, handleInputChange, clear]=useForm({name:"", email:"", cpf:"", password:""})
+
+    const SignUpFunction = async(body, clear, navigate) =>{
+        console.log(body) 
+        await axios.post (`${baseUrl}signup`, body)    
+        .then((res)=>{  
+        localStorage.setItem ("token", res.data.token)
+        console.log(res.data)
+        clear()
+        cadastroEndereco(navigate)      
+        })   
+        .catch((err)=>
+        alert(err.response.data.message))    
+    }
 
     const onSubmit=(event)=>{
         event.preventDefault()
         SignUpFunction(form, clear, navigate)
     }
 
+    // useLayoutEffect(()=>{
+    //     const token = localStorage.getItem("token")
+    //     if(token){
+    //         cadastroEndereco(navigate)
+    //     }
+    // },[navigate])     
+       
+       
     return(
         <div>
             <p>Cadastrar</p>
@@ -34,7 +59,7 @@ const SignUp=()=>{
                 onChange={handleInputChange}/>
                 <br/><br/>
 
-                <input placeholder="CPF" type="text"
+                <input placeholder="CPF (111.111.111-11)" type="text"
                 name={"cpf"}
                 value={form.cpf}
                 onChange={handleInputChange}/>
@@ -48,6 +73,7 @@ const SignUp=()=>{
                 name="password"
                 value={form.password}
                 onChange={handleInputChange}/>
+                <br/><br/>
 
                 <button type={"submit"}>Criar</button>
                 {/* onClick={()=>cadastroEndereco(navigate)} */}

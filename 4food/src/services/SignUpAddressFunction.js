@@ -3,7 +3,7 @@ import { baseUrl } from "../BaseUrl/baseUrl";
 import { vaiHome } from "../routes/Coordinator";
 
 export const SignUpAddressFunction = async (body, clear, navigate) =>{
-    await axios.post (`${baseUrl}address`, body)
+    await axios.put(`${baseUrl}address`, body)
     .then((res)=>{    
     localStorage.setItem("token", res.data.token)
     clear()
