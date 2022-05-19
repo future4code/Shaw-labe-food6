@@ -1,13 +1,18 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "../../Components/Header/Header";
 import { cadastroEndereco } from "../../routes/Coordinator";
+
 
 const SignUp=()=>{
     const navigate = useNavigate()
     return(
         <div>
+        <Header/>
+       
             <p>Cadastrar</p>
             <form>
+            
                 <input placeholder="Nome e Sobrenome" type="text"/>
                 <input placeholder="E-mail" type="text"/>
                 <input placeholder="CPF" type="number"/>

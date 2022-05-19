@@ -1,11 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "../../Components/Header/Header";
 import { vaiHome } from "../../routes/Coordinator";
 
 const SignUpAddress =()=>{
     const navigate = useNavigate()
     return(
         <div>
+        <Header/>
             <p>Meu Endereço</p>
             <form>
                 <input placeholder="Rua/Av."/>

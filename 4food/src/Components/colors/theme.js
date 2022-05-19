@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material';
-import { neutraColor, primaryColor , secondaryColor} from './colors'
+import { neutraColor, primaryColor , secondaryColor} from '../colors/colors'
 
 const theme = createTheme({
   palette: {
