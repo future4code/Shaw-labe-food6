@@ -9,7 +9,7 @@ import axios from "axios";
     const [cpf, setCpf]=useState()
     const [hasAddress, setHasAddress]=useState()
     const [address, setAddress]=useState()
-    const [users, setUsers]=useState([])
+    const [user, setUser]=useState({})
 
 
     const onChangeId =(ev)=>{
@@ -57,18 +57,21 @@ const handleUsers=()=>{
         address:""
     }
     axios.post(`${baseUrl}/profile`, body).then((res)=>{
-        setUsers(res.data.results)
+        setUser(res.data.user)
     }).catch((err)=>{
         console.log(err)
     })
     
     }
+    // const lista = listaRestaurantes.map((restaurant)=>{
+    //     <div key={}>{restaurant.id}</div>
 
+    // })
 
     return(
         <div>
             <h1>Meu Perfil</h1>
-                <p>Nome fulano X</p>
+                <p>{user.name}</p>
                 <p>email@email.com</p>
                 <p>+55 21 9999999</p>
             <button>Editar <img src="lapis" /></button>

@@ -1,14 +1,15 @@
 import { Routes, Route, BrowserRouter} from "react-router-dom";
+import Carrinho from "../Pages/carrinh/Carrinho";
+import Home from "../Pages/home/Home";
+import Login from "../Pages/login/Login";
+import EditaCadastro from "../Pages/perfil/EditaCadastro";
+import EditaEndereco from "../Pages/perfil/EditaEndereco";
+import Perfil from "../Pages/perfil/Perfil";
+import RestaurantPage from "../Pages/restaurantPage/RestaurantPage";
+import SignUp from "../Pages/signup/SignUp";
+import SignUpAddress from "../Pages/signup/SignUpAddress";
 
-import Home from "../pages/home/Home";
-import Login from "../pages/login/Login";
-import SignUp from "../pages/signup/SignUp";
-import SignUpAddress from "../pages/signup/SignUpAddress";
-import RestaurantPage from "../pages/restaurantPage/RestaurantPage";
-import Carrinho from "../pages/carrinh/Carrinho";
-import Perfil from "../pages/perfil/Perfil";
-import EditaCadastro from "../pages/perfil/EditaCadastro";
-import EditaEndereco from "../pages/perfil/EditaEndereco";
+
 
 
 const Router = ()=>{
