@@ -1,9 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+
 // import { vaiHome } from "../../routes/Coordinator";
 import useForm from "../../hooks/useForm";
 import {SignUpAddressFunction} from "../../services/SignUpAddressFunction";
-import {useUnprotectedPage} from "../../hooks/useUnprotectedPage";
+//import {useUnprotectedPage} from "../../hooks/useUnprotectedPage";
+
+import Header from "../../Components/Header/Header";
 
 
 const SignUpAddress =()=>{
@@ -19,6 +22,7 @@ const SignUpAddress =()=>{
     
     return(
         <div>
+            <Header/>
             <p>Meu Endereço</p>
             <form onSubmit={onSubmit}>
                 <input placeholder="Rua/Av."

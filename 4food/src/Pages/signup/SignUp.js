@@ -2,15 +2,15 @@ import React, { useLayoutEffect } from "react";
 import axios from "axios";
 
 import { useNavigate } from "react-router-dom";
+import Header from "../../Components/Header/Header";
 import { cadastroEndereco } from "../../routes/Coordinator";
 
-import useForm from "../../hooks/useForm";
 
+import useForm from "../../hooks/useForm";
 import { baseUrl } from "../../BaseUrl/baseUrl";
 // import {SignUpFunction} from "../../services/SignUpFunction";
 
-const SignUp=()=>{ 
-    
+const SignUp=()=>{
     const navigate = useNavigate()
     const token = localStorage.getItem("token")
     const [form, handleInputChange, clear]=useForm({name:"", email:"", cpf:"", password:""})
@@ -38,12 +38,15 @@ const SignUp=()=>{
     //     if(token){
     //         cadastroEndereco(navigate)
     //     }
-    // },[navigate])     
+    // },[navigate])    
        
        
     return(
         <div>
+            <Header/>
+       
             <p>Cadastrar</p>
+
             <form onSubmit={onSubmit}>
                 <input placeholder="Nome e Sobrenome" type="text"
                 required
@@ -78,7 +81,6 @@ const SignUp=()=>{
                 <button type={"submit"}>Criar</button>
                 {/* onClick={()=>cadastroEndereco(navigate)} */}
             </form>
-
         </div>
     )
 }

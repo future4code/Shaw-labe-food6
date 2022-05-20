@@ -10,6 +10,7 @@ import Perfil from "../pages/perfil/Perfil";
 import EditaCadastro from "../pages/perfil/EditaCadastro";
 import EditaEndereco from "../pages/perfil/EditaEndereco";
 
+
 const Router = ()=>{
     return(
 

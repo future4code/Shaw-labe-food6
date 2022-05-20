@@ -1,9 +1,14 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+
 import useForm from "../../hooks/useForm";
 import {useUnprotectedPage} from "../../hooks/useUnprotectedPage";
 import { vaiSignup } from "../../routes/Coordinator";
 import {LoginFunction} from "../../services/LoginFunction";
+
+import Header from "../../Components/Header/Header";
+import { vaiSignup,vaiHome } from "../../routes/Coordinator";
+
 
 const Login = ()=>{
     useUnprotectedPage()
@@ -17,7 +22,10 @@ const Login = ()=>{
     }
 
     return(
+        
         <div>
+            <Header/>
+    
             <p>Entrar</p>
 
             <form onSubmit={onSubmit}>
@@ -33,7 +41,7 @@ const Login = ()=>{
                 name={"password"}
                 onChange={handleInputChange}/>
                 
-                <button type={"submit"}>Entrar</button>                              
+                <button type={"submit"}>Entrar</button>                         
             </form>
             
             <p>Não possui cadastro?</p>
