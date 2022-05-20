@@ -1,12 +1,13 @@
 import { Routes, Route, BrowserRouter} from "react-router-dom";
 import Home from "../pages/home/Home";
-
 import Login from "../pages/login/Login";
 import SignUp from "../pages/signup/SignUp";
 import SignUpAddress from "../pages/signup/SignUpAddress";
-import Home from "../pages/home/Home";
 import RestaurantPage from "../pages/restaurantPage/RestaurantPage";
 import Carrinho from "../pages/carrinh/Carrinho";
+import Perfil from "../pages/perfil/Perfil";
+import EditaCadastro from "../pages/perfil/EditaCadastro";
+import EditaEndereco from "../pages/perfil/EditaEndereco";
 
 
 

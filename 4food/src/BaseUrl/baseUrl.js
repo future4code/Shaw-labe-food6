@@ -1,1 +1,1 @@
-export const baseUrl = "https://us-central1-missao-newton.cloudfunctions.net/{{fourFoodB}}/"
+export const baseUrl = "https://us-central1-missao-newton.cloudfunctions.net/fourFoodB/"

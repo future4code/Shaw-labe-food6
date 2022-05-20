@@ -4,10 +4,16 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import {baseUrl} from '../../BaseUrl/baseUrl';
+import useCardBusca from '../../hooks/useCardBusca';
 
 
 
 const CardBusca = () => {
+
+  const recipes = useCardBusca ([], `${baseUrl}/restaurants`)
+  console.log (recipes)
+
   
     return (
         
