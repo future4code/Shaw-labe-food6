@@ -1,13 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
 import useForm from "../../hooks/useForm";
 import {useUnprotectedPage} from "../../hooks/useUnprotectedPage";
-import { vaiSignup } from "../../routes/Coordinator";
 import {LoginFunction} from "../../services/LoginFunction";
-
 import Header from "../../Components/Header/Header";
 import { vaiSignup,vaiHome } from "../../routes/Coordinator";
+import CardBusca from "../../Components/cardBusca/CardBusca";
 
 
 const Login = ()=>{
@@ -24,6 +22,8 @@ const Login = ()=>{
     return(
         
         <div>
+        <Header/>
+        <CardBusca/>
             <Header/>
     
             <p>Entrar</p>

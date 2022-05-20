@@ -30,6 +30,7 @@ const Footer = () =>{
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static"
+            
       >
         <Toolbar >
         <center></center>
