@@ -4,5 +4,8 @@ import Toolbar from '@mui/material/Toolbar';
 
 
 export const ButtonDiv = styled(Toolbar)`
-align-items: center;
+align-items: flex-end;
+display: flex;
+flex-direction: column
+
 ` 
