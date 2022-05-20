@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Header from "../../Components/Header/Header";
 import { vaiSignup,vaiHome } from "../../routes/Coordinator";
+import CardBusca from "../../Components/cardBusca/CardBusca";
 
 const Login = ()=>{
     const navigate = useNavigate()
@@ -10,6 +11,7 @@ const Login = ()=>{
         
         <div>
         <Header/>
+        <CardBusca/>
     
             <p>Entrar</p>
             <form>

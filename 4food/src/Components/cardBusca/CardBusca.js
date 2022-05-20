@@ -11,7 +11,7 @@ import useCardBusca from '../../hooks/useCardBusca';
 
 const CardBusca = () => {
 
-  const recipes = useCardBusca ([], `${baseUrl}/restaurants`)
+  const recipes = useCardBusca ([], `${baseUrl}/restaurants/10`)
   console.log (recipes)
 
   
@@ -20,17 +20,14 @@ const CardBusca = () => {
         <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
           <CardMedia
-            component="img"
-            height="140"
-            image="/static/images/cards/contemplative-reptile.jpg"
-            alt="imagem hamburguer"
+            
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Burger Vila Madalena
+              Burger Vila Madalena 
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              50-60 min frete R$6,00
+              50-60 min frete R$6,00 
             </Typography>
           </CardContent>
         </CardActionArea>
