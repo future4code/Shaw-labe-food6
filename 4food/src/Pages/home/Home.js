@@ -3,24 +3,24 @@ import { useNavigate } from "react-router-dom";
 import Header from "../../Components/Header/Header"
 import CardRestaurant from "../../Components/cardRestaurant/CardRestaurant"
 import Footer from "../../Components/Footer/Footer"
+import useRequestData from "../../hooks/useRequestData";
 
 const Home=()=>{
     const navigate = useNavigate()
     const [rests, getRest] = useRequestData([], `${baseUrl}/restaurants`);
 
     const onClickCard = (id) => {
-        vaiPgRest (navigate, id);
-      };
+      vaiPgRest (navigate, id);
+    };
 
-      const restList =
-      rests &&
-      rests.map((rest) => {
+    const restList = rests && rests.map((rest) => {
       return (
         <CardBusca
-          logoUrl={rest.id}
-          name={rest.id}
+        key={rest.id}
+          logoUrl={rest.logoUrl}
+          name={rest.name}
           deliveryTime={rest.deliveryTime}
-          shipping={}
+          shipping={rest.shipping}
         />
       );
     });
@@ -29,8 +29,7 @@ const Home=()=>{
         <div>
             <Header/>
             <CardBusca/>
-            <Footer/>
-            
+            <Footer/>            
         </div>
     )
 }
