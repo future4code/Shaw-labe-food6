@@ -5,12 +5,16 @@ import CardRestaurant from "../../Components/cardRestaurant/CardRestaurant"
 import Footer from "../../Components/Footer/Footer"
 import useRequestData from "../../hooks/useRequestData";
 
+import { baseUrl } from "../../BaseUrl/baseUrl";
+import { vaiPgRest } from "../../routes/Coordinator";
+import CardBusca from "../../Components/cardBusca/CardBusca";
+
 const Home=()=>{
     const navigate = useNavigate()
     const [rests, getRest] = useRequestData([], `${baseUrl}/restaurants`);
 
     const onClickCard = (id) => {
-      vaiPgRest (navigate, id);
+      vaiPgRest(navigate, id);
     };
 
     const restList = rests && rests.map((rest) => {

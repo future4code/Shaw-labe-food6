@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const CardRestaurant=()=>{
     
-    const [data, setData] = useState(initialDate)
+    // const [data, setData] = useState(initialDate)
     
     const mostraLista = (props) => {
     }
