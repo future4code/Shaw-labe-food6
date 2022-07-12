@@ -1,13 +1,16 @@
-import { GlobalState } from "./global/GlobalState";
-import Router from "./routes/Router";
+import { ThemeProvider } from '@emotion/react';
+import Router from './Routes/router';
+import React from 'react';
+import theme from './Constants/theme';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-        <GlobalState>
-          <Router/>
-        </GlobalState>
-    </div>
+    <ThemeProvider theme={theme}>
+    <Router/>
+    </ThemeProvider>
   );
 }
 export default App;

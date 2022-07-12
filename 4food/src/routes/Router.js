@@ -1,33 +1,27 @@
-import { Routes, Route, BrowserRouter} from "react-router-dom";
-
-import Home from "../pages/home/Home";
-import Login from "../pages/login/Login";
-import SignUp from "../pages/signup/SignUp";
-import SignUpAddress from "../pages/signup/SignUpAddress";
-import RestaurantPage from "../pages/restaurantPage/RestaurantPage";
-import Carrinho from "../pages/carrinh/Carrinho";
-import Perfil from "../pages/perfil/Perfil";
-import EditaCadastro from "../pages/perfil/EditaCadastro";
-import EditaEndereco from "../pages/perfil/EditaEndereco";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "../Pages/Login/login";
+import Signup from "../Pages/Signup/signup";
+import SignupAdress from "../Pages/SignupAdress/signupAdress";
+import Feed from "../Pages/Feed/feedPage";
+import Restaurant from "../Pages/Restaurant/restaurant";
+import Profile from "../Pages/Profile/profile";
+import Cart from "../Pages/Cart/cart";
 
 
-const Router = ()=>{
+
+const Router = () =>{
     return(
-
-        <BrowserRouter>            
+        <BrowserRouter>
             <Routes>
-                <Route index element={<Login/>}/>
-                <Route path="/Cadastro" element={<SignUp/>}/>
-                <Route path="/Cadastro/Endereco" element={<SignUpAddress/>}/>
-                <Route path="/Home" element={<Home/>}/>
-                <Route path="/Home/Restaurante" element={<RestaurantPage/>}/>
-                <Route path="/Carrinho" element={<Carrinho/>}/>
-                <Route path="/Perfil" element={<Perfil/>}/>
-                <Route path="/Edita-Cadastro" element={<EditaCadastro/>}/>
-                <Route path="/Edita-Endereco" element={<EditaEndereco/>}/>                
+            <Route index element={<Login/>}/>
+            <Route path="/signup" element={<Signup/>}/>
+            <Route path="/signup/adress" element={<SignupAdress/>}/>
+            <Route path="/feed" element={<Feed/>}/>
+            <Route path="/feed/restaurant" element={<Restaurant/>}/>
+            <Route path="/profile" element={<Profile/>}/>
+            <Route path="/cart" element={<Cart/>}/>
             </Routes>
-        </BrowserRouter>        
+        </BrowserRouter>
     )
 }
-
-export default Router;
+export default Router
